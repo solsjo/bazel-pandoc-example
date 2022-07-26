@@ -1,4 +1,4 @@
-load("//:pandoc.bzl", "pandoc")
+load("@bazel_pandoc//:pandoc.bzl", "pandoc")
 
 pandoc(
     name = "example",
