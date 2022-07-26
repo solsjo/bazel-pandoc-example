@@ -1,7 +1,6 @@
 ---
 author: Oskar Solsjö
-title: Example for Pandoc and Reveal.js
-revealjs-url: 'reveal.js'
+title: Example for Bazel Pandoc and Reveal.js
 theme: black
 css:
   - 'https://fonts.googleapis.com/css?family=Roboto+Slab:700'
