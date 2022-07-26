@@ -5,5 +5,6 @@ pandoc(
     src = "//:example/example.md",
     from_format = "markdown",
     to_format = "revealjs",
-    output = "index.html"
+    output = "index.html",
+    options = ["--standalone"],
 )
