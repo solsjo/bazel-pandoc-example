@@ -7,6 +7,7 @@ pandoc(
     to_format = "revealjs",
     output = "index.html",
     options = [
-        "--self-contained",
+        "--standalone",
+        "-V revealjs-url=https://github.com/hakimel/reveal.js",
     ],
 )
