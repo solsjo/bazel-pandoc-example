@@ -8,6 +8,6 @@ pandoc(
     output = "index.html",
     options = [
         "--standalone",
-        "-V revealjs-url=https://github.com/hakimel/reveal.js",
+        '-V revealjs-url="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0"',
     ],
 )
