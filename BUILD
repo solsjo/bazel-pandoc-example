@@ -7,7 +7,6 @@ pandoc(
     to_format = "revealjs",
     output = "index.html",
     options = [
-        "--standalone",
-        "--self-contained"
+        "--self-contained",
     ],
 )
