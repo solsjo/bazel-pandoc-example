@@ -6,5 +6,7 @@ pandoc(
     from_format = "markdown",
     to_format = "revealjs",
     output = "index.html",
-    options = ["--standalone"],
+    options = [
+        #"--standalone"
+    ],
 )
