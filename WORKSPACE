@@ -27,12 +27,7 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "com.github.ajalt:clikt:2.2.0",
-        "com.google.dagger:dagger:2.25.2",
-        "com.google.dagger:dagger-compiler:2.25.2",
-        "com.google.truth:truth:1.0",
-        "javax.inject:javax.inject:1",
-        "junit:junit:4.12",
+        "net.sourceforge.plantuml:plantuml:1.2021.3",
     ],
     fetch_sources = True,
     repositories = [
@@ -42,3 +37,9 @@ maven_install(
     ],
     strict_visibility = True,
 )
+
+#maven_jar(
+#    name = "plantuml",
+#    artifact = "net.sourceforge.plantuml:plantuml:1.2021.3",
+#    sha1 = "8b5be104e564b2b3cec307e2b0dba199f77fc422",
+#)
