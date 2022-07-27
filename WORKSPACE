@@ -14,9 +14,9 @@ http_archive(
 
 http_archive(
     name = "bazel_pandoc",
-    strip_prefix = "solsjo-bazel-pandoc-02208b2",
+    strip_prefix = "solsjo-bazel-pandoc-6be3725",
     url = "https://github.com/solsjo/bazel-pandoc/zipball/master",
-    sha256 = "6ef001e403a3885e32168343cf45dc145470e4e05224f27979efcaad7614f92d",
+    sha256 = "5bf2b6d458a623cea579a7eb13b70abb564026611c5e48f930369fa448315f05",
     type = "zip",
 )
 
