@@ -3,6 +3,16 @@ workspace(name = "pandoc_example")
 load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
+    name = "pandoc_plantuml_filter",
+    strip_prefix = "solsjo-bazel-pandoc-eb7e560",
+    build_file = "//:third_party/pandoc/pandoc_plantuml_filter.BUILD",
+    workspace_file = "//:third_party/pandoc/pandoc_filter.WORKSPACE",
+    url = "https://github.com/timofurrer/pandoc-plantuml-filter/zipball/master",
+    sha256 = "fe41858fe01ba6a2144e730d69510d684265cf0a49482c03aa2485ff69e43135",
+    type = "zip",
+)
+
+http_archive(
     name = "bazel_pandoc",
     strip_prefix = "solsjo-bazel-pandoc-eb7e560",
     url = "https://github.com/solsjo/bazel-pandoc/zipball/master",
@@ -13,16 +23,6 @@ http_archive(
 load("@bazel_pandoc//:repositories.bzl", "pandoc_repositories")
 
 pandoc_repositories()
-
-http_archive(
-    name = "pandoc_plantuml_filter",
-    strip_prefix = "solsjo-bazel-pandoc-eb7e560",
-    build_file = "//:third_party/pandoc/pandoc_plantuml_filter.BUILD",
-    workspace_file = "//:third_party/pandoc/pandoc_filter.WORKSPACE",
-    url = "https://github.com/timofurrer/pandoc-plantuml-filter/zipball/master",
-    sha256 = "fe41858fe01ba6a2144e730d69510d684265cf0a49482c03aa2485ff69e43135",
-    type = "zip",
-)
 
 http_archive(
     name = "rules_python",
