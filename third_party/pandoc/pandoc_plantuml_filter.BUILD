@@ -14,8 +14,8 @@ java_binary(
 
 py_binary(
     name = "pandoc_plantuml_filter",
-    srcs = ["pandoc_plantuml_filter.py"],
-    main = "pandoc_plantuml_filter.py",
+    srcs = [":pandoc_plantuml_filter.py"],
+    main = ":pandoc_plantuml_filter.py",
     env = {
         "PLANTUML_BIN":"$(location :plantuml)",
     },
