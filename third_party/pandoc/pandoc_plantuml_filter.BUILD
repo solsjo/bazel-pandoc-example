@@ -6,7 +6,7 @@ py_binary(
     srcs = ["pandoc_plantuml_filter.py"],
     main = "pandoc_plantuml_filter.py",
     env = {
-        "PLANTUML_BIN":"$(location //third_party/plantuml:plantuml)",
+        "PLANTUML_BIN":"$(location @bazel_pandoc_example//third_party/plantuml:plantuml)",
     },
     #deps = [":testlib"],
 )
