@@ -47,6 +47,7 @@ maven_install(
 http_archive(
     name = "pandoc_plantuml_filter",
     strip_prefix = "solsjo-bazel-pandoc-eb7e560",
+    build_file = "//:third_party/pandoc/pandoc_plantuml_filter.BUILD",
     url = "https://github.com/timofurrer/pandoc-plantuml-filter/zipball/master",
     sha256 = "fe41858fe01ba6a2144e730d69510d684265cf0a49482c03aa2485ff69e43135",
     type = "zip",
