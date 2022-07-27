@@ -8,5 +8,8 @@ py_binary(
     env = {
         "PLANTUML_BIN":"$(location @bazel_pandoc_example//third_party/plantuml:plantuml)",
     },
+    data = [
+        "@bazel_pandoc_example//third_party/plantuml:plantuml"
+    ],
     #deps = [":testlib"],
 )
