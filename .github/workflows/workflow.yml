@@ -17,8 +17,10 @@ jobs:
       - name: build
         run: >
             bazelisk build @pandoc_plantuml_filter//:pandoc_plantuml_filter;
-            bazelisk build //:example
+            bazelisk build //:example;
+            mkdir -p ./pages;
+            cp bazel-bin/index.html pages/index.html
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: bazel-bin # The folder the action should deploy.
+          folder: pages # The folder the action should deploy.
