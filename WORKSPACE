@@ -4,11 +4,11 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "pandoc_plantuml_filter",
-    strip_prefix = "solsjo-bazel-pandoc-eb7e560",
+    strip_prefix = "timofurrer-pandoc-plantuml-filter-61ec9f8",
     build_file = "//:third_party/pandoc/pandoc_plantuml_filter.BUILD",
     workspace_file = "//:third_party/pandoc/pandoc_filter.WORKSPACE",
     url = "https://github.com/timofurrer/pandoc-plantuml-filter/zipball/master",
-    sha256 = "fe41858fe01ba6a2144e730d69510d684265cf0a49482c03aa2485ff69e43135",
+    sha256 = "a747321e6511fc2c846f95d5e78a873ed8b93d435600f4e5790e48cc5d6a58d4",
     type = "zip",
 )
 
