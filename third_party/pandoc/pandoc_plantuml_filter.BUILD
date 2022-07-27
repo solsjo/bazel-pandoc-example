@@ -22,5 +22,6 @@ py_binary(
     data = [
         ":plantuml"
     ],
+    visibility = ["//visibility:public"],
     deps = [requirement("pandocfilters")],
 )
