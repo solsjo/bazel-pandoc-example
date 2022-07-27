@@ -11,5 +11,5 @@ py_binary(
     data = [
         "@bazel_pandoc_example//third_party/plantuml:plantuml"
     ],
-    #deps = [":testlib"],
+    deps = [requirement("pandocfilters")],
 )
