@@ -17,6 +17,7 @@ jobs:
       - name: build
         run: >
             bazelisk build //third_party/plantuml:plantuml;
+            bazelisk run @pandoc_plantuml_filter//:pandoc_plantuml_filter;
             rm -rf bazel-bin/ ;
             bazelisk build //:example
       - name: Deploy 🚀
