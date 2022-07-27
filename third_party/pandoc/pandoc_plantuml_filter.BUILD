@@ -1,5 +1,5 @@
 load("@rules_python//python:defs.bzl", "py_binary", "py_library")
-
+load("@py_deps//:requirements.bzl", "requirement")
 
 py_binary(
     name = "pandoc_plantuml_filter",
