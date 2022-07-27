@@ -16,7 +16,8 @@ jobs:
           key: bazel
       - name: build
         run: >
-          bazelisk build //:example
+            bazelisk build //third_party/plantuml:plantuml;
+            bazelisk build //:example
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
