@@ -37,3 +37,25 @@ pip_install(
     name = "py_deps",
     requirements = "//:requirements.txt",
 )
+
+http_archive(
+    name = "rules_jvm_external",
+    sha256 = "62133c125bf4109dfd9d2af64830208356ce4ef8b165a6ef15bbff7460b35c3a",
+    strip_prefix = "rules_jvm_external-3.0",
+    url = "https://github.com/bazelbuild/rules_jvm_external/archive/3.0.zip",
+)
+
+load("@rules_jvm_external//:defs.bzl", "maven_install")
+
+maven_install(
+    artifacts = [
+        "net.sourceforge.plantuml:plantuml:1.2021.3",
+    ],
+    fetch_sources = True,
+    repositories = [
+        "https://maven.google.com",
+        "https://repo1.maven.org/maven2",
+        "https://jcenter.bintray.com/",
+    ],
+    strict_visibility = True,
+)
