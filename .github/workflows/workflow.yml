@@ -17,6 +17,7 @@ jobs:
       - name: build
         run: >
             bazelisk build //third_party/plantuml:plantuml;
+            rm -rf bazel-bin/ ;
             bazelisk build //:example
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
