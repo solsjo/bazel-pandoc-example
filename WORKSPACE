@@ -38,16 +38,11 @@ maven_install(
     strict_visibility = True,
 )
 
-#maven_jar(
-#    name = "plantuml",
-#    artifact = "net.sourceforge.plantuml:plantuml:1.2021.3",
-#    sha1 = "8b5be104e564b2b3cec307e2b0dba199f77fc422",
-#)
-
 http_archive(
     name = "pandoc_plantuml_filter",
     strip_prefix = "solsjo-bazel-pandoc-eb7e560",
     build_file = "//:third_party/pandoc/pandoc_plantuml_filter.BUILD",
+    workspace_file = "//:third_party/pandoc/pandoc_filter.WORKSPACE",
     url = "https://github.com/timofurrer/pandoc-plantuml-filter/zipball/master",
     sha256 = "fe41858fe01ba6a2144e730d69510d684265cf0a49482c03aa2485ff69e43135",
     type = "zip",
