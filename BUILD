@@ -11,6 +11,9 @@ pandoc(
         #'--filter $(locations @pandoc_plantuml_filter//:pandoc_plantuml_filter)',
         #'-V revealjs-url="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0"',
     ],
+    env = {
+        "PLANTUML_BIN":"$(location :plantuml)",
+    },
     filters = [
         "@pandoc_plantuml_filter//:pandoc_plantuml_filter",
     ],
