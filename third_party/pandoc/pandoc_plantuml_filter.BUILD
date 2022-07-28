@@ -17,7 +17,7 @@ py_binary(
     srcs = [":pandoc_plantuml_filter.py"],
     main = ":pandoc_plantuml_filter.py",
     env = {
-        "PLANTUML_BIN":"$(location :plantuml)",
+        "PLANTUML_BIN":"$(execpath :plantuml)",
     },
     data = [
         ":plantuml"
