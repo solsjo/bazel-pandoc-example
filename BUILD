@@ -8,10 +8,10 @@ pandoc(
     output = "index.html",
     options = [
         "--standalone",
-        '--filter $(locations @pandoc_plantuml_filter//:pandoc_plantuml_filter)',
+        #'--filter $(locations @pandoc_plantuml_filter//:pandoc_plantuml_filter)',
         #'-V revealjs-url="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0"',
     ],
-    data = [
+    filters = [
         "@pandoc_plantuml_filter//:pandoc_plantuml_filter",
     ],
 )
