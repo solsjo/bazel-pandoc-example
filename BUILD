@@ -12,7 +12,7 @@ pandoc(
         #'-V revealjs-url="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0"',
     ],
     env = {
-        "PLANTUML_BIN":"$(location @pandoc_plantuml_filter//:plantuml)",
+        "PLANTUML_BIN":"$(locations @pandoc_plantuml_filter//:plantuml)",
     },
     data = [
         "@pandoc_plantuml_filter//:plantuml",
