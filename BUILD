@@ -14,6 +14,9 @@ pandoc(
     env = {
         "PLANTUML_BIN":"$(location @pandoc_plantuml_filter//:plantuml)",
     },
+    data = [
+        "@pandoc_plantuml_filter//:plantuml",
+    ],
     filters = [
         "@pandoc_plantuml_filter//:pandoc_plantuml_filter",
     ],
