@@ -17,7 +17,7 @@ jobs:
       - name: build
         run: >
             bazelisk build @pandoc_plantuml_filter//:pandoc_plantuml_filter;
-            bazelisk build //:example;
+            bazelisk build //:example --verbose_failures --sandbox_debug;
             mkdir -p ./pages;
             cp bazel-bin/index.html pages/index.html
       - name: Deploy 🚀
