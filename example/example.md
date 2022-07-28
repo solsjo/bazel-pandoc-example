@@ -15,6 +15,12 @@ var a = 1;
 
 ## Slide 1.2
 
+```plantuml
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
 
+Alice -> Bob: Another authentication Request
+Alice <-- Bob: another authentication Response
+```
 
 ## Slide 2
