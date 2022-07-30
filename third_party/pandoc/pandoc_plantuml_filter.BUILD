@@ -9,6 +9,9 @@ java_binary(
     runtime_deps = [
         "@maven//:net_sourceforge_plantuml_plantuml",
     ],
+    jvm_flags = [
+        "-Djava.awt.headless=true"
+    ],
 )
 
 
