@@ -13,7 +13,7 @@ pandoc(
     ],
     env = {
         "PLANTUML_BIN":"$(locations @pandoc_plantuml_filter//:plantuml)",
-        "DISPLAY":":99",
+        #"DISPLAY":":99",
     },
     data = [
         "@pandoc_plantuml_filter//:plantuml",
