@@ -25,7 +25,7 @@ load("@rules_jvm_external//:defs.bzl", "maven_install")
 
 maven_install(
     artifacts = [
-        "net.sourceforge.plantuml:plantuml:1.2021.3",
+        "net.sourceforge.plantuml:plantuml:1.2022.6",
     ],
     fetch_sources = True,
     repositories = [
