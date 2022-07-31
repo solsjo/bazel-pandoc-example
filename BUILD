@@ -17,7 +17,7 @@ pandoc(
     },
     data = [
         "@pandoc_plantuml_filter//:plantuml",
-        ":example_puml",
+        "example.svg",
     ],
     filters = [
         "@pandoc_plantuml_filter//:pandoc_plantuml_filter",
