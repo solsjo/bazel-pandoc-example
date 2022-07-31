@@ -15,12 +15,8 @@ var a = 1;
 
 ## Slide 1.2
 
-```plantuml
-Alice -> Bob: Authentication Request
-Bob --> Alice: Authentication Response
-
-Alice -> Bob: Another authentication Request
-Alice <-- Bob: another authentication Response
-```
+Some text, followed by.
+An image!
+![The image](./example.svg)
 
 ## Slide 2
