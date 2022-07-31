@@ -17,8 +17,17 @@ pandoc(
     },
     data = [
         "@pandoc_plantuml_filter//:plantuml",
+        ":example_puml",
     ],
     filters = [
         "@pandoc_plantuml_filter//:pandoc_plantuml_filter",
     ],
+)
+
+genrule(
+    name = "example_puml",
+    srcs = ["//:example/example.puml"],
+    outs = ["example.svg"],
+    cmd = "$(location @pandoc_plantuml_filter//:plantuml) -tsvg -o \"$OUTS\" $(location //:example/example.puml)",
+    tools = ["@pandoc_plantuml_filter//:plantuml"],
 )
