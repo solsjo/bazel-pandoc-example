@@ -23,7 +23,7 @@ jobs:
         run: >
             bazelisk build @pandoc_plantuml_filter//:pandoc_plantuml_filter;
             mkdir -p ./pages;
-            bazelisk run @pandoc_plantuml_filter//:plantuml -- -tsvg -o ./pages/index.html ./example/example.puml;
+            bazelisk run @pandoc_plantuml_filter//:plantuml -- -tsvg -o $PWD/pages/index.html $PWD/example/example.puml;
             #bazelisk build //:example --verbose_failures --sandbox_debug;
             #cp bazel-bin/index.html pages/index.html
       - name: Deploy 🚀
