@@ -22,10 +22,10 @@ jobs:
       - name: build
         run: >
             bazelisk build @pandoc_plantuml_filter//:pandoc_plantuml_filter;
-            #bazelisk build //:example --verbose_failures --sandbox_debug;
             mkdir -p ./pages;
+            bazelisk run @pandoc_plantuml_filter//:plantuml -- -tsvg -o ./pages/index.html ./example/example.puml;
+            #bazelisk build //:example --verbose_failures --sandbox_debug;
             #cp bazel-bin/index.html pages/index.html
-            bazelisk run @pandoc_plantuml_filter//:plantuml -- -tsvg -o ./pages/index.html ./example/example.puml
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
