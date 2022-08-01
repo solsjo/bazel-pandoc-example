@@ -12,15 +12,15 @@ pandoc(
         #'-V revealjs-url="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0"',
     ],
     env = {
-        "PLANTUML_BIN":"$(locations @pandoc_plantuml_filter//:plantuml)",
+        #"PLANTUML_BIN":"$(locations @pandoc_plantuml_filter//:plantuml)",
         #"DISPLAY":":99",
     },
     data = [
-        "@pandoc_plantuml_filter//:plantuml",
+        #"@pandoc_plantuml_filter//:plantuml",
         "example.svg",
     ],
     filters = [
-        "@pandoc_plantuml_filter//:pandoc_plantuml_filter",
+        #"@pandoc_plantuml_filter//:pandoc_plantuml_filter",
     ],
 )
 
