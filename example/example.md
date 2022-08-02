@@ -9,7 +9,7 @@ css:
 ## Slide 1.1
 
 ```js
-var a = 1;
+var a = 2;
 ```
 
 
