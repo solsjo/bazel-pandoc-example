@@ -12,6 +12,22 @@ pandoc(
     ],
     data = [
         "example.svg",
+        ":example_pptx",
+    ],
+)
+
+pandoc(
+    name = "example_pptx",
+    src = "//:example/example.md",
+    from_format = "markdown",
+    to_format = "pptx",
+    output = "example.pptx",
+    options = [
+        "--standalone",
+        "--self-contained",
+    ],
+    data = [
+        "example.svg",
     ],
 )
 
