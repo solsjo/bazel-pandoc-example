@@ -12,7 +12,6 @@ css:
 var a = 2;
 ```
 
-
 ## Slide 1.2
 
 Some text, followed by.
@@ -21,4 +20,4 @@ An image!
 
 ## Slide 2
 
-![The image](./example.pptx)
+![The pptx](./example.pptx)
