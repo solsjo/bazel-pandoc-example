@@ -20,3 +20,5 @@ An image!
 ![The image](./example.svg)
 
 ## Slide 2
+
+![The image](./example.pptx)
