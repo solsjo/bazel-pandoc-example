@@ -20,5 +20,5 @@ genrule(
     srcs = ["//:example/example.puml"],
     outs = ["example.svg"],
     cmd = "$(location @pandoc_plantuml_filter//:plantuml) -nometadata -tsvg -p < $(location //:example/example.puml) > $(OUTS)",
-    tools = ["@pandoc_plantuml_filter//:plantuml"],
+    tools = ["//third_party/plantuml:plantuml"],
 )
