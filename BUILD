@@ -28,6 +28,6 @@ genrule(
     name = "example_puml",
     srcs = ["//:example/example.puml"],
     outs = ["example.svg"],
-    cmd = "$(location @pandoc_plantuml_filter//:plantuml) -tsvg -o $(OUTS) $(location //:example/example.puml)",
+    cmd = "$(location @pandoc_plantuml_filter//:plantuml) -nometadata -tsvg -p < $(location //:example/example.puml) > $(OUTS)",
     tools = ["@pandoc_plantuml_filter//:plantuml"],
 )
