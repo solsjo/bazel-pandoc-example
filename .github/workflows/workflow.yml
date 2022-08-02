@@ -5,8 +5,6 @@ permissions:
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      DISPLAY: ':99'
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
@@ -16,12 +14,8 @@ jobs:
         with:
           path: "~/.cache/bazel"
           key: bazel
-      - name: Setup headless environment
-        run: |
-          Xvfb :99 -screen 0 1024x768x24 > /dev/null 2>&1 &
       - name: build
         run: >
-            bazelisk build @pandoc_plantuml_filter//:pandoc_plantuml_filter;
             mkdir -p ./pages;
             bazelisk build //:example --verbose_failures;
             cp bazel-bin/index.html pages/index.html;
