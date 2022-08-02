@@ -24,7 +24,8 @@ jobs:
             bazelisk build @pandoc_plantuml_filter//:pandoc_plantuml_filter;
             mkdir -p ./pages;
             bazelisk build //:example --verbose_failures;
-            cp -R bazel-bin/* pages/
+            cp bazel-bin/example.html pages/index.html
+            cp bazel-bin/example.svg pages/example.svg
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
