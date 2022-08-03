@@ -22,6 +22,7 @@ pandoc(
     to_format = "pptx",
     output = "example.pptx",
     options = [
+        "--standalone"
     ],
     data = [
         "example.svg",
