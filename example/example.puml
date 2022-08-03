@@ -1,4 +1,5 @@
 @startuml
+!pragma svginterface true
 Alice -> Bob: Authentication Request
 Bob --> Alice: Authentication Response
 
