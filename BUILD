@@ -17,7 +17,7 @@ pandoc(
 
 pandoc(
     name = "example_pptx",
-    src = "//:example/example.md",
+    src = "//:example/example_pptx.md",
     from_format = "markdown",
     to_format = "pptx",
     output = "example.pptx",
