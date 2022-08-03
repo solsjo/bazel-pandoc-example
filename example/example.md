@@ -20,4 +20,3 @@ An image!
 
 ## Slide 2
 
-![The pptx](./example.pptx)
