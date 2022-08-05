@@ -1,6 +1,5 @@
 @startuml
 !pragma svginterface true
-!pragma layout smetana
 
 :Main Admin: as Admin
 (Use the application) as (Use)
