@@ -16,7 +16,7 @@ jobs:
           key: bazel
       - name: build
         run: >
-            apt-get install graphviz;
+            sudo apt-get install graphviz;
             mkdir -p ./pages;
             bazelisk build //:example --verbose_failures;
             cp bazel-bin/index.html pages/index.html;
