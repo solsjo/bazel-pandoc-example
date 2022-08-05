@@ -14,9 +14,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "bazel_pandoc",
-    strip_prefix = "solsjo-bazel-pandoc-a6c0e55",
+    strip_prefix = "solsjo-bazel-pandoc-3543350",
     url = "https://github.com/solsjo/bazel-pandoc/zipball/master",
-    sha256 = "cc76d1b6e7981d9a22d6e96d10306f75ce25b9497d0f93e2c7ce93b7c421f173",
+    sha256 = "ea17ca177dc20a8c92cd3b7bb5d4f79ad5785bcc04ede1a8aef88a1175745815",
     type = "zip",
 )
 
@@ -46,44 +46,3 @@ maven_install(
     ],
     strict_visibility = True,
 )
-
-http_archive(
-    name = "io_tweag_rules_nixpkgs",
-    sha256 = "b01f170580f646ee3cde1ea4c117d00e561afaf3c59eda604cf09194a824ff10",
-    strip_prefix = "rules_nixpkgs-0.9.0",
-    urls = ["https://github.com/tweag/rules_nixpkgs/archive/v0.9.0.tar.gz"],
-)
-load("@io_tweag_rules_nixpkgs//nixpkgs:repositories.bzl", "rules_nixpkgs_dependencies")
-rules_nixpkgs_dependencies()
-load("@io_tweag_rules_nixpkgs//nixpkgs:nixpkgs.bzl", "nixpkgs_git_repository", "nixpkgs_package")
-
-load(
-    "@io_tweag_rules_nixpkgs//nixpkgs:nixpkgs.bzl",
-    "nixpkgs_package",
-    "nixpkgs_git_repository",
-)
-
-nixpkgs_git_repository(
-    name = "nixpkgs",
-    revision = "22.05",
-    sha256 = "0f8c25433a6611fa5664797cd049c80faefec91575718794c701f3b033f2db01",
-)
-
-nixpkgs_package(
-    name = "graphviz",
-    repository = "@nixpkgs",
-    build_file_content = """
-package(default_visibility = [ "//visibility:public" ])
-exports_files([
-  "nix/bin/dot",
-  "nix/bin/neato",
-])
-filegroup(
-  name = "bin",
-  srcs = glob(["nix/bin/*"]),
-)
-filegroup(
-  name = "lib",
-  srcs = glob(["nix/lib/**/*.so"]),
-)
-""")
