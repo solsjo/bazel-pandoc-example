@@ -12,6 +12,15 @@ css:
 var a = 2;
 ```
 
+::: notes
+
+This is my note.
+
+- It can contain Markdown
+- like this list
+
+:::
+
 ## Slide 1.2
 
 Some text, followed by.
