@@ -6,7 +6,7 @@ css:
   - 'https://fonts.googleapis.com/css?family=Roboto+Slab:700'
 ---
 
-## Slide 1.1
+## Slide 1
 
 - First bullet
 - Second bullet
@@ -20,13 +20,13 @@ These are my speaker notes.
 
 :::
 
-## Slide 1.2
+## Slide 2
 
 Some text, followed by.
 An image!
 ![The image](./example.svg)
 
-## Slide 2
+## Slide 3
 
 ```js
 var a = 2;
