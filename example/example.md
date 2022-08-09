@@ -8,6 +8,10 @@ css:
 
 ## Slide 1.1
 
+- First bullet
+- Second bullet
+  * A sub bullet
+
 ```js
 var a = 2;
 ```
