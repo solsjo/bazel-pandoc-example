@@ -24,6 +24,7 @@ jobs:
             sudo apt-get install graphviz;
             mkdir -p ./pages;
             bazelisk build //:example --verbose_failures;
+            bazelisk query --output=graph --notool_deps 'deps(//:example)' | dot -Tsvg > pages/deps.svg;
             cp bazel-bin/index.html pages/index.html;
             cp bazel-bin/example.svg pages/example.svg;
             bazelisk build //:example_pptx --verbose_failures;
