@@ -31,3 +31,7 @@ An image!
 ```js
 var a = 2;
 ```
+## Slide 4
+
+Deps:
+![deps](./deps.svg)
