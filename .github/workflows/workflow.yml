@@ -15,7 +15,12 @@ jobs:
           path: "~/.cache/bazel"
           key: bazel
       - name: build
+        shell: bash
+        env:
+          API_KEY: ${{ secrets.API_KEY }}
         run: >
+            mkdir -p ./temp
+            echo "build --remote_header=x-buildbuddy-api-key=$API_KEY" > ./temp/.bazelrc;
             sudo apt-get install graphviz;
             mkdir -p ./pages;
             bazelisk build //:example --verbose_failures;
