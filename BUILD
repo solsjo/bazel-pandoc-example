@@ -37,3 +37,9 @@ genrule(
     cmd = "$(location //third_party/plantuml:plantuml) -nometadata -tsvg -p < $(location //:example/example.puml) > $(OUTS)",
     tools = ["//third_party/plantuml:plantuml"],
 )
+
+latex_document(
+    name = "example_tex",
+    srcs = [],
+    main = "//:example/example.tex",
+)
