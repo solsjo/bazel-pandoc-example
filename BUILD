@@ -41,6 +41,6 @@ genrule(
 
 latex_document(
     name = "example_tex",
-    srcs = [],
+    srcs = ["@bazel_latex//packages:drawstack"],
     main = "//:example/example.tex",
 )
