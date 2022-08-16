@@ -1,4 +1,5 @@
 load("@bazel_pandoc//:pandoc.bzl", "pandoc")
+load("@bazel_latex//:latex.bzl", "latex_document")
 
 pandoc(
     name = "example",
