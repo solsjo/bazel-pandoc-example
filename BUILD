@@ -53,3 +53,11 @@ py_binary(
     visibility = ["//visibility:public"],
     deps = [requirement("pdf2image")],
 )
+
+genrule(
+    name = "example_image",
+    srcs = ["//:example/example_tex"],
+    outs = ["example_image.svg"],
+    cmd = "$(location :pdf2image) --format=svg --input=$(location //:example/example_tex) --output=$(OUTS)",
+    tools = [":pdf2image"],
+)
