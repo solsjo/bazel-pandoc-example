@@ -14,7 +14,7 @@ def setup_argparse():
 
 def main():
     argparse = setup_argparse()
-    args = arparse.parse()
+    args = argparse.parse()
     input = args.input
     output = args.output_dir
     format = args.format
