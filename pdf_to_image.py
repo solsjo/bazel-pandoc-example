@@ -16,7 +16,7 @@ def main():
     parser = setup_argparse()
     args = parser.parse_args()
     input = args.input
-    output = args.output_dir
+    output = args.output
     format = args.format
     # Store Pdf with convert_from_path function
     images = convert_from_path(input)
