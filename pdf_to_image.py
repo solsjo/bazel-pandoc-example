@@ -13,8 +13,8 @@ def setup_argparse():
 
 
 def main():
-    argparse = setup_argparse()
-    args = argparse.parse()
+    parser = setup_argparse()
+    args = parser.parse_args()
     input = args.input
     output = args.output_dir
     format = args.format
