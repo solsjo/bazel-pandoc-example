@@ -1,5 +1,6 @@
 load("@bazel_pandoc//:pandoc.bzl", "pandoc")
 load("@bazel_latex//:latex.bzl", "latex_document")
+load("@py_deps//:requirements.bzl", "requirement")
 
 pandoc(
     name = "example",
