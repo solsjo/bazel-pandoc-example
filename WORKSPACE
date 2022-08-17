@@ -71,5 +71,3 @@ pip_install(
     name = "py_deps",
     requirements = "//:requirements.txt",
 )
-
-load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
