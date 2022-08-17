@@ -1,1 +1,2 @@
 pandocfilters
+pdf2image
