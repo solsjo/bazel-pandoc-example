@@ -44,3 +44,11 @@ latex_document(
     srcs = ["@bazel_latex//packages:drawstack"],
     main = "//:example/example.tex",
 )
+
+py_binary(
+    name = "pdf2image",
+    srcs = [":pdf_to_image.py"],
+    main = ":pdf_to_image.py",
+    visibility = ["//visibility:public"],
+    deps = [requirement("pdf2image")],
+)
