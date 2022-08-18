@@ -10,7 +10,7 @@ configure_make(
     name = "dvisvgm_configure",
     lib_source = "@dvisvgm_source//:all_srcs",
     configure_options = [
-        "--enable-bundled-libs"
+        #"--enable-bundled-libs"
     ],
     out_binaries = [
         "dvisvgm",
