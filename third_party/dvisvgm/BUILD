@@ -20,6 +20,6 @@ configure_make(
     ],
     #autoreconf = True,
     #autogen = True,
-    configure_in_place = True,
+    #configure_in_place = True,
     visibility = ["//visibility:public"]
 )
