@@ -32,8 +32,8 @@ jobs:
             cp bazel-bin/example.pptx pages/example.pptx;
             bazelisk build //:example_tex;
             cp bazel-bin/example_tex.pdf pages/example.pdf;
-            bazelisk build //:example_image;
-            cp bazel-bin/example_image.svg pages/example_image.svg;
+            #bazelisk build //:example_image;
+            #cp bazel-bin/example_image.svg pages/example_image.svg;
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
