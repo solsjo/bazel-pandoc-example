@@ -37,7 +37,7 @@ configure_make(
     #],
     autoreconf = True,
     autoreconf_options = [
-        "-i",
+        "-ivf",
     ],
     #autogen = True,
     configure_in_place = True,
