@@ -18,8 +18,7 @@ configure_make(
     targets = [
         "install",
     ],
-    #autoreconf = True,
-    #autogen = True,
-    #configure_in_place = True,
+    autogen = True,
+    configure_in_place = True,
     visibility = ["//visibility:public"]
 )
