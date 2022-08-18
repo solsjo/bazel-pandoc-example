@@ -1,4 +1,4 @@
-load("@rules_foreign_cc//tools/build_defs:configure.bzl", "configure_make")
+load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
 
 #type ./autogen.sh if configure is not present in the dvisvgm root folder
 #either type ./configure if you don't want to use the bundled libraries brotli, potrace, woff2, and xxHash but link against the corresponding system libraries,
@@ -15,6 +15,9 @@ configure_make(
     ],
     out_binaries = [
         "dvisvgm",
+    ],
+    targets = [
+        "install",
     ],
     autogen = True,
     configure_in_place = True,
