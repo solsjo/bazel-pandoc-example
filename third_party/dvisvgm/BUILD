@@ -35,6 +35,10 @@ configure_make(
     #targets = [
     #    "install",
     #],
+    autoreconf = True,
+    autoreconf_options = [
+        "-i",
+    ],
     #autogen = True,
     configure_in_place = True,
     visibility = ["//visibility:public"]
