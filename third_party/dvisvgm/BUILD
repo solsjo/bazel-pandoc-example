@@ -9,7 +9,6 @@ load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
 configure_make(
     name = "dvisvgm_configure",
     lib_source = "@dvisvgm_source//:all_srcs",
-    out_lib_dir = "lib",
     configure_options = [
         "--enable-bundled-libs"
     ],
@@ -19,8 +18,8 @@ configure_make(
     targets = [
         "install",
     ],
-    autoreconf = True,
-    autogen = True,
+    #autoreconf = True,
+    #autogen = True,
     configure_in_place = True,
     visibility = ["//visibility:public"]
 )
