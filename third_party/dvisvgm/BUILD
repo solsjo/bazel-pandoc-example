@@ -35,10 +35,10 @@ configure_make(
     #targets = [
     #    "install",
     #],
-    autoreconf = True,
-    autoreconf_options = [
-        "-ivf",
-    ],
+    #autoreconf = True,
+    #autoreconf_options = [
+    #    "-ivf",
+    #],
     #autogen = True,
     configure_in_place = True,
     visibility = ["//visibility:public"]
