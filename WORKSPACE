@@ -104,3 +104,15 @@ http_archive(
     ],
     sha256 = "1e30d28250d61992912a7f748c5976ecd4e387bc1c1aa74879db79553ddad931",
 )
+
+http_archive(
+    name = "kpathsea_source",
+    build_file_content = _ALL_CONTENT,
+    strip_prefix = "kpathsea-master",
+    #strip_prefix = "dvisvgm-2.14",
+    urls = [
+        "https://github.com/AaronNGray/kpathsea/archive/refs/heads/master.zip",
+        #"https://github.com/mgieseki/dvisvgm/archive/refs/tags/2.14.tar.gz",
+    ],
+    sha256 = "fabc825b7daec1b49ee3a66cf097b94cfad35620ebea3fae3c7e508819349657",
+)
