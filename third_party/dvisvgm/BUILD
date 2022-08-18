@@ -36,6 +36,6 @@ configure_make(
     #    "install",
     #],
     #autogen = True,
-    #configure_in_place = True,
+    configure_in_place = True,
     visibility = ["//visibility:public"]
 )
