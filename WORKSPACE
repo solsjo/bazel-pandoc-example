@@ -93,7 +93,6 @@ filegroup(
 )
 """
 
-# pcre source code repository
 http_archive(
     name = "dvisvgm_source",
     build_file_content = _ALL_CONTENT,
