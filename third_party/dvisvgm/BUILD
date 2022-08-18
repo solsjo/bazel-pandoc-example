@@ -8,7 +8,7 @@ load("@rules_foreign_cc//foreign_cc:defs.bzl", "configure_make")
 
 configure_make(
     name = "dvisvgm_configure",
-    lib_source = "@dvisvgm/:all_srcs",
+    lib_source = "@dvisvgm//:all_srcs",
     out_lib_dir = "lib",
     configure_options = [
         "--enable-bundled-libs"
