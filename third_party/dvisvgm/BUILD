@@ -22,3 +22,20 @@ configure_make(
     configure_in_place = True,
     visibility = ["//visibility:public"]
 )
+
+configure_make(
+    name = "kpathsea_configure",
+    lib_source = "@kpathsea_source//:all_srcs",
+    configure_options = [
+        #"--enable-bundled-libs"
+    ],
+    #out_binaries = [
+    #    "dvisvgm",
+    #],
+    #targets = [
+    #    "install",
+    #],
+    #autogen = True,
+    #configure_in_place = True,
+    visibility = ["//visibility:public"]
+)
