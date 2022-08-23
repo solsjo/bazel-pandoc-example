@@ -1,5 +1,5 @@
 load("@bazel_pandoc//:pandoc.bzl", "pandoc")
-load("@bazel_latex//:latex.bzl", "latex_document")
+load("@bazel_latex//:latex.bzl", "tex_to_svg")
 load("@py_deps//:requirements.bzl", "requirement")
 
 pandoc(
@@ -40,24 +40,8 @@ genrule(
     tools = ["//third_party/plantuml:plantuml"],
 )
 
-latex_document(
+tex_to_svg(
     name = "example_tex",
     srcs = ["@bazel_latex//packages:drawstack"],
-    main = "//:example/example.tex",
-)
-
-py_binary(
-    name = "pdf2image",
-    srcs = [":pdf_to_image.py"],
-    main = ":pdf_to_image.py",
-    visibility = ["//visibility:public"],
-    deps = [requirement("pdf2image")],
-)
-
-genrule(
-    name = "example_image",
-    srcs = [":example_tex"],
-    outs = ["example_image.svg"],
-    cmd = "$(location :pdf2image) --format=svg --input=$(location :example_tex) --output=$(OUTS)",
-    tools = [":pdf2image"],
+    main = //:example/example.tex",
 )
