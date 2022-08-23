@@ -49,9 +49,10 @@ maven_install(
 
 http_archive(
     name = "bazel_latex",
-    sha256 = "6007da2ea603a00a2f481e5683c722fbdd269c173d5e0d6c5d6f5f4d874a366e",
-    strip_prefix = "bazel-latex-1.1.1",
-    url = "https://github.com/ProdriveTechnologies/bazel-latex/archive/v1.1.1.tar.gz",
+    sha256 = "87a5e67e96c18c2d687078794925ac9af9b1052158ae0ff03f495c9e355c59dd",
+    strip_prefix = "bazel-latex-master",
+    #url = "https://github.com/ProdriveTechnologies/bazel-latex/archive/v1.1.1.tar.gz",
+    url = "https://github.com/solsjo/bazel-latex/archive/refs/heads/master.zip",
 )
 
 load("@bazel_latex//:repositories.bzl", "latex_repositories")
@@ -92,39 +93,3 @@ filegroup(
     visibility = ["//visibility:public"],
 )
 """
-
-http_archive(
-    name = "dvisvgm_source",
-    build_file_content = _ALL_CONTENT,
-    strip_prefix = "dvisvgm-2.13.2",
-    #strip_prefix = "dvisvgm-2.14",
-    urls = [
-        "https://github.com/mgieseki/dvisvgm/archive/refs/tags/2.13.2.tar.gz",
-        #"https://github.com/mgieseki/dvisvgm/archive/refs/tags/2.14.tar.gz",
-    ],
-    sha256 = "1e30d28250d61992912a7f748c5976ecd4e387bc1c1aa74879db79553ddad931",
-)
-
-OWN_TEXLIVE_MODULAR_PACKAGES = []
-
-for path, sha256, patches in OWN_TEXLIVE_MODULAR_PACKAGES:
-        name = "texlive_%s" % path.replace("/", "__")
-        http_archive(
-            name = name,
-            build_file_content = """
-filegroup(
-    name = "%s",
-    srcs = glob(
-        include = ["**"],
-        exclude = [
-            "BUILD.bazel",
-            "WORKSPACE",
-        ],
-    ),
-    visibility = ["//visibility:public"],
-)
-""" % name,
-            patches = patches,
-            sha256 = sha256,
-            url = "https://github.com/ProdriveTechnologies/texlive-modular/releases/download/%s/texlive-%s-%s.tar.xz" % (_TEXLIVE_VERSION, _TEXLIVE_VERSION, path.replace("/", "--")),
-        )
