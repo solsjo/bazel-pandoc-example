@@ -31,11 +31,7 @@ jobs:
             bazelisk build //:example_pptx --verbose_failures;
             cp bazel-bin/example.pptx pages/example.pptx;
             bazelisk build //:example_tex;
-            cp bazel-bin/example_tex.pdf pages/example.pdf;
-            #bazelisk build //third_party/dvisvgm:kpathsea_configure;
-            #bazelisk build //third_party/dvisvgm:dvisvgm_configure;
-            #bazelisk build //:example_image;
-            #cp bazel-bin/example_image.svg pages/example_image.svg;
+            cp bazel-bin/example_tex.svg pages/example_tex.svg
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
