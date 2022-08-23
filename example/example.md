@@ -39,5 +39,5 @@ Deps of this presentation:
 
 ## Slide 5
 
-tex image :
+tex image:
 ![tex to_svg](./example_tex.svg)
