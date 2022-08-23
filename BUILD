@@ -43,5 +43,5 @@ genrule(
 tex_to_svg(
     name = "example_tex",
     srcs = ["@bazel_latex//packages:drawstack"],
-    main = //:example/example.tex",
+    main = "//:example/example.tex",
 )
