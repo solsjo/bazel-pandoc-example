@@ -30,9 +30,9 @@ jobs:
             cp bazel-bin/example.svg pages/example.svg;
             bazelisk build //:example_pptx --verbose_failures;
             cp bazel-bin/example.pptx pages/example.pptx;
-            bazelisk build //:example_tex;
-            cp bazel-bin/example_tex.svg pages/example_tex.svg;
-            cat bazel-bin/example_tex.svg;
+            #bazelisk build //:example_tex;
+            #cp bazel-bin/example_tex.svg pages/example_tex.svg;
+            #cat bazel-bin/example_tex.svg;
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
