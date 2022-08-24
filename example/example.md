@@ -41,3 +41,5 @@ Deps of this presentation:
 
 tex image:
 ![tex to_svg](./example_tex.svg)
+
+Cool!
