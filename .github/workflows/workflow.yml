@@ -31,7 +31,7 @@ jobs:
             bazelisk build //:example_pptx --verbose_failures;
             cp bazel-bin/example.pptx pages/example.pptx;
             bazelisk build //:example_tex;
-            #cp bazel-bin/example_tex.svg pages/example_tex.svg;
+            cp bazel-bin/example_tex.svg pages/example_tex.svg;
             #cat bazel-bin/example_tex.svg;
 
       - name: Deploy 🚀
