@@ -40,8 +40,8 @@ genrule(
     tools = ["//third_party/plantuml:plantuml"],
 )
 
-tex_to_svg(
-    name = "example_tex",
-    srcs = ["@bazel_latex//packages:drawstack"],
-    main = "//:example/example.tex",
-)
+#tex_to_svg(
+#    name = "example_tex",
+#    srcs = ["@bazel_latex//packages:drawstack"],
+#    main = "//:example/example.tex",
+#)
