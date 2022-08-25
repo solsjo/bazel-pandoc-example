@@ -49,7 +49,7 @@ maven_install(
 
 http_archive(
     name = "bazel_latex",
-    sha256 = "a7fb49ba969aa1d341c61bf8bd39da2ab3aebb7229f9a3f24607b1a649c48c61",
+    sha256 = "bbf123a27c204524f040b64d0c9ec54c2f778a10bd012fc6949c50717f0f0e3c",
     strip_prefix = "bazel-latex-master",
     #url = "https://github.com/ProdriveTechnologies/bazel-latex/archive/v1.1.1.tar.gz",
     url = "https://github.com/solsjo/bazel-latex/archive/refs/heads/master.zip",
