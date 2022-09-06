@@ -14,6 +14,7 @@ pandoc(
     ],
     data = [
         "example.svg",
+        ":example_svg"
     ],
 )
 
@@ -40,15 +41,8 @@ genrule(
     tools = ["//third_party/plantuml:plantuml"],
 )
 
-latex_to_svg(
-    name = "example_tex",
-    srcs = ["@bazel_latex//packages:drawstack"],
-    main = 
-    deps = ["@bazel_latex//packages:drawstack"],
-)
-
 latex_document(
-    name = "my_standalone_figure",
+    name = "example_tex",
     srcs = ["@bazel_latex//packages:drawstack"],
     main = "//:example/example.tex",
 )
