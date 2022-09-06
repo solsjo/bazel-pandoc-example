@@ -1,5 +1,5 @@
 load("@bazel_pandoc//:pandoc.bzl", "pandoc")
-load("@bazel_latex//:latex.bzl", "tex_to_svg")
+load("@bazel_latex//:latex.bzl", "latex_document", "latex_to_svg")
 load("@py_deps//:requirements.bzl", "requirement")
 
 pandoc(
@@ -40,9 +40,20 @@ genrule(
     tools = ["//third_party/plantuml:plantuml"],
 )
 
-tex_to_svg(
+latex_to_svg(
     name = "example_tex",
     srcs = ["@bazel_latex//packages:drawstack"],
-    main = "//:example/example.tex",
+    main = 
     deps = ["@bazel_latex//packages:drawstack"],
+)
+
+latex_document(
+    name = "my_standalone_figure",
+    srcs = ["@bazel_latex//packages:drawstack"],
+    main = "//:example/example.tex",
+)
+
+latex_to_svg(
+    name = "example_svg",
+    src = ":my_standalone_figure",
 )
