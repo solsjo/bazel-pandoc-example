@@ -49,5 +49,5 @@ latex_document(
 
 latex_to_svg(
     name = "example_svg",
-    src = ":my_standalone_figure",
+    src = ":example_tex",
 )
