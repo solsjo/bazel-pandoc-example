@@ -14,9 +14,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "bazel_pandoc",
-    strip_prefix = "solsjo-bazel-pandoc-1354afe",
+    strip_prefix = "solsjo-bazel-pandoc-8b803cf",
     url = "https://github.com/solsjo/bazel-pandoc/zipball/master",
-    sha256 = "e5cb9a931135b91cb67aa2417d472870e5d3a827c04407a931aef7ffa192c146",
+    sha256 = "6fbdce3fd3c16d2c61ec91d86327871ac12528cba67cc2114d788142cfee9e8b",
     type = "zip",
 )
 
