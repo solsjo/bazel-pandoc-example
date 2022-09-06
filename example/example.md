@@ -25,7 +25,7 @@ These are my speaker notes.
 
 Some text, followed by.
 An image!
-![The image](./external/bazel-pandoc-example/example.svg)
+![The image](./example.svg)
 
 ## Slide 3
 
