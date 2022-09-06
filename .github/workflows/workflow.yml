@@ -25,7 +25,7 @@ jobs:
             mkdir -p ./pages;
             bazelisk build //example:example_puml;
             bazelisk build //example:example;
-            bazelisk query --output=graph --notool_deps 'deps(//:example)' | dot -Tsvg > pages/deps.svg;
+            bazelisk query --output=graph --notool_deps 'deps(//example:example)' | dot -Tsvg > pages/deps.svg;
             cp bazel-bin/index.html pages/index.html;
             cp bazel-bin/example.svg pages/example.svg;
 
