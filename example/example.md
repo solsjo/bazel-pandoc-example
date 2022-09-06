@@ -37,11 +37,3 @@ var a = 2;
 
 Deps of this presentation:
 ![deps](./deps.svg)
-
-## Slide 5
-
-tex image:
-![tex to_svg](./example_tex.svg)
-
-Cool!
-d

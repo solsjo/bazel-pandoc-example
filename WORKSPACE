@@ -14,10 +14,9 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 
 http_archive(
     name = "bazel_pandoc",
-    strip_prefix = "solsjo-bazel-pandoc-3543350",
-    url = "https://github.com/solsjo/bazel-pandoc/zipball/master",
-    sha256 = "ea17ca177dc20a8c92cd3b7bb5d4f79ad5785bcc04ede1a8aef88a1175745815",
-    type = "zip",
+    strip_prefix = "bazel-pandoc-0.4-beta",
+    url = "https://github.com/solsjo/bazel-pandoc/archive/refs/tags/v0.4-beta.tar.gz",
+    sha256 = "79770374a226f2cb73600806b1d24d5110127ec5bdef02f17aabfbd006d49445",
 )
 
 load("@bazel_pandoc//:repositories.bzl", "pandoc_repositories")
@@ -49,7 +48,7 @@ maven_install(
 
 http_archive(
     name = "bazel_latex",
-    sha256 = "7879cbf3ae3a4a34de03faa319209a0b804e5da69f49a521910e06f85388e5ac",
+    sha256 = "e83db8df308271f87af44d788d75cd37b53872797516b20d6b3fd8e7137bdabf",
     strip_prefix = "bazel-latex-master",
     #url = "https://github.com/ProdriveTechnologies/bazel-latex/archive/v1.1.1.tar.gz",
     url = "https://github.com/solsjo/bazel-latex/archive/refs/heads/master.zip",
