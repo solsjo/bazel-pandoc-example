@@ -14,7 +14,7 @@ pandoc(
     ],
     data = [
         "example.svg",
-        ":example_svg"
+        #":example_svg"
     ],
 )
 
