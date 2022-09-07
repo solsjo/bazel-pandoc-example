@@ -27,7 +27,7 @@ jobs:
             bazelisk build //example:example;
             bazelisk query --output=graph --notool_deps 'deps(//example:example)' | dot -Tsvg > pages/deps.svg;
             cp bazel-bin/example/index.html pages/index.html;
-            bazelisk build //example:example_pdf;
+            bazelisk build //example:example.pdf;
             cp bazel-bin/example/example.pdf pages/example.pdf
             bazelisk build //example:example_beamer;
             cp bazel-bin/example/example_beamer.pdf pages/example_beamer.pdf
