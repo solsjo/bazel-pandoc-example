@@ -37,8 +37,8 @@ pandoc(
     name = "example_beamer",
     src = ":example_beamer.md",
     from_format = "markdown",
-    to_format = "beamer",
-    output = "example_beamer.pdf",
+    to_format = "context",
+    output = "example_beamer.tex",
     options = [
         "--standalone",
         "--self-contained",
@@ -68,6 +68,30 @@ latex_document(
     name = "example_tex",
     srcs = ["@bazel_latex//packages:drawstack"],
     main = ":example.tex",
+)
+
+filegroup(
+    name = "beamer_deps",
+    srcs = [
+        ":amsmath",
+        ":amssymb",
+        ":amsthm",
+        ":enumerate",
+        ":etoolbox",
+        ":geometry",
+        ":hyperref",
+        ":ifpdf",
+        ":pgfcore",
+        ":translator",
+        "@texlive_texmf__texmf-dist__tex__latex__beamer",
+    ],
+    visibility = ["//visibility:public"],
+)
+
+latex_document(
+    name = "example_beamer",
+    srcs = ":beamer_deps",
+    main = ":example_beamer.tex",
 )
 
 latex_to_svg(
