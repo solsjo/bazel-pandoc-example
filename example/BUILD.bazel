@@ -57,7 +57,7 @@ genrule(
 )
 
 genrule(
-    name = "example_puml",
+    name = "example_puml_pdf",
     srcs = [":example.puml"],
     outs = ["example.pdf"],
     cmd = "$(location //third_party/plantuml:plantuml) -nometadata -tpdf -p < $(location :example.puml) > $(OUTS)",
