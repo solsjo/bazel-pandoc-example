@@ -27,7 +27,6 @@ pandoc(
     options = [
         "--standalone",
         "--self-contained",
-        "--pdf-engine=/usr/bin/pdflatex",
     ],
     data = [
         "example.svg",
@@ -43,6 +42,7 @@ pandoc(
     options = [
         "--standalone",
         "--self-contained",
+        "--pdf-engine=/usr/bin/pdflatex",
     ],
     data = [
         "example.pdf",
