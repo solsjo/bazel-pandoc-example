@@ -24,6 +24,8 @@ jobs:
             sudo apt-get install graphviz;
             sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra;
             mkdir -p ./pages;
+            echo "###";
+            which pdflatex;
             bazelisk build //example:example_puml;
             bazelisk build //example:example;
             bazelisk query --output=graph --notool_deps 'deps(//example:example)' | dot -Tsvg > pages/deps.svg;
