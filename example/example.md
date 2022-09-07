@@ -11,6 +11,9 @@ css:
 - First bullet
 - <span style="color:blue">Second bullet</span>
 
+Some text<br/>
+Some other text<br/>
+
 ::: notes
 
 
