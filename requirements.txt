@@ -1,2 +1,4 @@
 pandocfilters
 pdf2image
+svglib
+reportlab

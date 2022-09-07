@@ -57,11 +57,11 @@ genrule(
 )
 
 genrule(
-    name = "example_puml_pdf",
-    srcs = [":example.puml"],
+    name = "example_svg_2_pdf",
+    srcs = [":example.svg"],
     outs = ["example.pdf"],
-    cmd = "$(location //third_party/plantuml:plantuml) -nometadata -tpdf -p < $(location :example.puml) > $(OUTS)",
-    tools = ["//third_party/plantuml:plantuml"],
+    cmd = "$(location //:svg2pdf) -nometadata -tpdf -p < $(location :example.svg) > $(OUTS)",
+    tools = ["//:svg2pdf"],
 )
 
 latex_document(
