@@ -38,7 +38,7 @@ pandoc(
     src = ":example_beamer.md",
     from_format = "markdown",
     to_format = "beamer",
-    output = "example.pdf",
+    output = "example_beamer.pdf",
     options = [
         "--standalone",
         "--self-contained",
