@@ -50,13 +50,23 @@ pandoc(
     ],
 )
 
+#genrule(
+#    name = "example_puml",
+#    srcs = [":example.puml"],
+#    outs = ["example.svg"],
+#    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -Psvginteractive=true -nometadata -tsvg -p < $(location :example.puml) > $(OUTS)",
+#    tools = ["//third_party/plantuml:plantuml"],
+#)
+
 genrule(
     name = "example_puml",
     srcs = [":example.puml"],
     outs = ["example.svg"],
-    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -Psvginteractive=true -nometadata -tsvg -p < $(location :example.puml) > $(OUTS)",
+    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -p -testdot > $(OUTS)",
     tools = ["//third_party/plantuml:plantuml"],
 )
+
+
 
 genrule(
     name = "example_svg_2_pdf",
