@@ -60,7 +60,7 @@ genrule(
     name = "example_svg_2_pdf",
     srcs = [":example.svg"],
     outs = ["example.pdf"],
-    cmd = "$(location //:svg2pdf) -nometadata -tpdf -p < $(location :example.svg) > $(OUTS)",
+    cmd = "$(location //:svg2pdf) $(location :example.svg) $(OUTS)",
     tools = ["//:svg2pdf"],
 )
 
