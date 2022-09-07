@@ -48,10 +48,10 @@ maven_install(
 
 http_archive(
     name = "bazel_latex",
-    sha256 = "e83db8df308271f87af44d788d75cd37b53872797516b20d6b3fd8e7137bdabf",
-    strip_prefix = "bazel-latex-master",
+    sha256 = "c0adcce633edc604bb49488c3e10d5e59b570b66d43934fbfd7d0392b6c991ce",
+    strip_prefix = "bazel-latex-0.1-extend-toolchain",
     #url = "https://github.com/ProdriveTechnologies/bazel-latex/archive/v1.1.1.tar.gz",
-    url = "https://github.com/solsjo/bazel-latex/archive/refs/heads/master.zip",
+    url = "https://github.com/solsjo/bazel-latex/archive/refs/tags/v0.1-extend-toolchain.tar.gz",
 )
 
 load("@bazel_latex//:repositories.bzl", "latex_repositories")
