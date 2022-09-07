@@ -30,9 +30,9 @@ jobs:
             bazelisk build //example:example.pdf;
             cp bazel-bin/example/example.pdf pages/example.pdf;
             bazelisk build //example:example_beamer_tex;
-            cp bazel-bin/example/example_beamer.tex pages/example_beamer.tex
-            bazelisk build //example:example_beamer;
-            cp bazel-bin/example/example_beamer.pdf pages/example_beamer.pdf
+            cp bazel-bin/example/example_beamer.tex pages/example_beamer.tex;
+            #bazelisk build //example:example_beamer;
+            #cp bazel-bin/example/example_beamer.pdf pages/example_beamer.pdf
             #cp bazel-bin/example.svg pages/example.svg;
 
       - name: Deploy 🚀
