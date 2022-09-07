@@ -22,7 +22,7 @@ jobs:
             mkdir -p ./temp;
             echo "build --remote_header=x-buildbuddy-api-key=$API_KEY" > ./temp/.bazelrc;
             sudo apt-get install graphviz;
-            sudo apt-get install texlive-full;
+            sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra;
             mkdir -p ./pages;
             bazelisk build //example:example_puml;
             bazelisk build //example:example;
