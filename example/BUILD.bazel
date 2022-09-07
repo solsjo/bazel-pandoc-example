@@ -70,37 +70,19 @@ latex_document(
     main = ":example.tex",
 )
 
-filegroup(
-    name = "beamer_deps",
-    srcs = [
-        ":amsmath",
-        ":amssymb",
-        ":amsthm",
-        ":enumerate",
-        ":etoolbox",
-        ":geometry",
-        ":hyperref",
-        ":ifpdf",
-        ":pgfcore",
-        ":translator",
-        "@texlive_texmf__texmf-dist__tex__latex__beamer",
-    ],
-    visibility = ["//visibility:public"],
-)
-
 latex_document(
     name = "example_beamer",
     srcs = [
-        ":amsmath",
-        ":amssymb",
-        ":amsthm",
-        ":enumerate",
-        ":etoolbox",
-        ":geometry",
-        ":hyperref",
-        ":ifpdf",
-        ":pgfcore",
-        ":translator",
+        "@bazel_latex//packages:amsmath",
+        "@bazel_latex//packages:amssymb",
+        "@bazel_latex//packages:amsthm",
+        "@bazel_latex//packages:enumerate",
+        "@bazel_latex//packages:etoolbox",
+        "@bazel_latex//packages:geometry",
+        "@bazel_latex//packages:hyperref",
+        "@bazel_latex//packages:ifpdf",
+        "@bazel_latex//packages:pgfcore",
+        "@bazel_latex//packages:translator",
         "@texlive_texmf__texmf-dist__tex__latex__beamer",
     ],
     main = ":example_beamer.tex",
