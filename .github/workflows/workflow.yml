@@ -22,6 +22,7 @@ jobs:
             mkdir -p ./temp;
             echo "build --remote_header=x-buildbuddy-api-key=$API_KEY" > ./temp/.bazelrc;
             sudo apt-get install graphviz;
+            sudo apt-get install texlive;
             mkdir -p ./pages;
             bazelisk build //example:example_puml;
             bazelisk build //example:example;
@@ -30,7 +31,7 @@ jobs:
             bazelisk build //example:example.pdf;
             cp bazel-bin/example/example.pdf pages/example.pdf;
             bazelisk build //example:example_beamer_tex;
-            cp bazel-bin/example/example_beamer.tex pages/example_beamer.tex;
+            cp bazel-bin/example/example_beamer.pdf pages/example_beamer.pdf;
             #bazelisk build //example:example_beamer;
             #cp bazel-bin/example/example_beamer.pdf pages/example_beamer.pdf
             #cp bazel-bin/example.svg pages/example.svg;
