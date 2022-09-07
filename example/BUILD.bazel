@@ -90,7 +90,19 @@ filegroup(
 
 latex_document(
     name = "example_beamer",
-    srcs = ":beamer_deps",
+    srcs = [
+        ":amsmath",
+        ":amssymb",
+        ":amsthm",
+        ":enumerate",
+        ":etoolbox",
+        ":geometry",
+        ":hyperref",
+        ":ifpdf",
+        ":pgfcore",
+        ":translator",
+        "@texlive_texmf__texmf-dist__tex__latex__beamer",
+    ],
     main = ":example_beamer.tex",
 )
 
