@@ -33,11 +33,34 @@ pandoc(
     ],
 )
 
+pandoc(
+    name = "example_beamer",
+    src = ":example_beamer.md",
+    from_format = "markdown",
+    to_format = "beamer",
+    output = "example.pdf",
+    options = [
+        "--standalone",
+        "--self-contained",
+    ],
+    data = [
+        "example.pdf",
+    ],
+)
+
 genrule(
     name = "example_puml",
     srcs = [":example.puml"],
     outs = ["example.svg"],
     cmd = "$(location //third_party/plantuml:plantuml) -nometadata -tsvg -p < $(location :example.puml) > $(OUTS)",
+    tools = ["//third_party/plantuml:plantuml"],
+)
+
+genrule(
+    name = "example_puml",
+    srcs = [":example.puml"],
+    outs = ["example.pdf"],
+    cmd = "$(location //third_party/plantuml:plantuml) -nometadata -tpdf -p < $(location :example.puml) > $(OUTS)",
     tools = ["//third_party/plantuml:plantuml"],
 )
 
