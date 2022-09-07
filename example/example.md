@@ -6,13 +6,17 @@ css:
   - 'https://fonts.googleapis.com/css?family=Roboto+Slab:700'
 ---
 
+<style>.hidden-bullets li { list-style-type: none}</style>
+
 ## Slide 1
 
 - First bullet
 - <span style="color:blue">Second bullet</span>
 
-Some text<br/>
-Some other text<br/>
+<!-- _class: hidden-bullets -->
+
+- Some text<br/>
+- Some other text<br/>
 
 ::: notes
 
@@ -26,9 +30,11 @@ These are my speaker notes.
 
 ## Slide 2
 
-Some text, followed by.
+<style scoped>li { list-style-type: none}</style>
+
+- Some text, followed by.
 An image!
-![The image](./example.svg)
+- ![The image](./example.svg)
 
 ## Slide 3
 
