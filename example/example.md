@@ -9,7 +9,7 @@ css:
 ## Slide 1
 
 - First bullet
-- Second bullet
+- <span style="color:blue">Second bullet</span>
 
 ::: notes
 
