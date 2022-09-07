@@ -15,16 +15,16 @@ css:
 
 <!-- _class: hidden-bullets -->
 
-- Some text<br/>
-- Some other text<br/>
+- Some text
+- Some other text
 
 ::: notes
-
 
 These are my speaker notes.
 
 - It can contain Markdown
 - like this list
+- and this bullet
 
 :::
 
