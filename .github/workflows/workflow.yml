@@ -25,7 +25,6 @@ jobs:
             sudo apt-get install texlive-latex-base texlive-fonts-recommended texlive-fonts-extra texlive-latex-extra;
             mkdir -p ./pages;
             echo "###";
-            which graphviz;
             which dot;
             which pdflatex;
             bazelisk build //example:example_puml;
