@@ -59,7 +59,7 @@ genrule(
 )
 
 genrule(
-    name = "example_puml",
+    name = "example_test",
     srcs = [":example.puml"],
     outs = ["example.svg"],
     cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -testdot; ls -a .; cp testdot.png $(OUTS)",
