@@ -12,9 +12,13 @@ pandoc(
         "--standalone",
         "--self-contained",
         "--incremental",
+        "--include-in-header=default.js",
+        "--include-in-header=default.css",
     ],
     data = [
         "example.svg",
+        "default.js",
+        "default.css",
         #":example_svg"
     ],
 )
