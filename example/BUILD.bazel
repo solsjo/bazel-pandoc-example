@@ -14,11 +14,13 @@ pandoc(
         "--incremental",
         "--include-in-header=default.js",
         "--include-in-header=default.css",
+        "--include-in-header=code_block.css",
     ],
     data = [
         "example.svg",
         "default.js",
         "default.css",
+        "code_block.css",
         #":example_svg"
     ],
 )
