@@ -14,7 +14,7 @@ pandoc(
         "--incremental",
     ],
     data = [
-        "example.svg",
+        "example.png",
         #":example_svg"
     ],
 )
@@ -50,19 +50,19 @@ pandoc(
     ],
 )
 
-#genrule(
-#    name = "example_puml",
-#    srcs = [":example.puml"],
-#    outs = ["example.svg"],
-#    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -Psvginteractive=true -nometadata -tsvg -p < $(location :example.puml) > $(OUTS)",
-#    tools = ["//third_party/plantuml:plantuml"],
-#)
+genrule(
+    name = "example_puml",
+    srcs = [":example.puml"],
+    outs = ["example.svg"],
+    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -Psvginteractive=true -nometadata -tsvg -p < $(location :example.puml) > $(OUTS)",
+    tools = ["//third_party/plantuml:plantuml"],
+)
 
 genrule(
     name = "example_puml",
     srcs = [":example.puml"],
     outs = ["example.svg"],
-    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -p -testdot > $(OUTS)",
+    cmd = "GRAPHVIZ_DOT=/usr/bin/dot; $(location //third_party/plantuml:plantuml) -testdot; ls -a .; cp testdot.png $(OUTS)",
     tools = ["//third_party/plantuml:plantuml"],
 )
 
