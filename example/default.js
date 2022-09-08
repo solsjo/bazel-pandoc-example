@@ -1,3 +1,4 @@
+<script>
 function addItemToMapOfLists(mapOfLists, name, item) {
   // mapOfLists = {
   //   'key1': [item1, item2, ...],
@@ -108,3 +109,4 @@ function main() {
 document.addEventListener('DOMContentLoaded', (event) => {
   main();
 });
+</script>
