@@ -34,7 +34,7 @@ These are my speaker notes.
 
 - Some text, followed by.
 An image!
-- ![The image](./example.png)
+- ![The image](./example.svg)
 
 ## Slide 3
 
