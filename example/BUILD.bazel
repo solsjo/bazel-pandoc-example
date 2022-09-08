@@ -15,7 +15,7 @@ pandoc(
         "--include-in-header=default.js",
         "--include-in-header=default.css",
         "--include-in-header=code_block.css",
-        "-V data-transition=none"
+        "-V data-transition=default",
     ],
     data = [
         "example.svg",
